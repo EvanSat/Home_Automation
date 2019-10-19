@@ -9,6 +9,7 @@ public class Windows implements Observer, ObserverDisplayElement {
 	private int hour;
 	@SuppressWarnings("unused")
 	private ObserverSubject observerData;
+	private int testValue;
 	
 	WindowState windowsFullOpen;
 	WindowState windowsHalfwayOpen;
@@ -63,18 +64,28 @@ public class Windows implements Observer, ObserverDisplayElement {
 	
 	public void windowsFullOpen() {
 		state.windowsFullOpen();
+		testValue = 1;
 	}
 	
 	public void windowsHalfwayOpen() {
 		state.windowsHalfwayOpen();
+		testValue = 2;
 	}
 	
 	public void windowsClose() {
 		state.windowsClose();
+		testValue = 3;
 	}
 	
 	public WindowState getWindowsFullOpen() {return windowsFullOpen;}
 	public WindowState getWindowsHalfwayState() {return windowsHalfwayOpen;}
 	public WindowState getWindowCloseState() {return windowsClose;}
 	
+	public int testValue() {
+		return testValue;
+	}
+	
+	public void setTestValue(int testValue) {
+		this.testValue = testValue;
+	}
 }

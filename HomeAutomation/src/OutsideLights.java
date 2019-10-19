@@ -10,6 +10,7 @@ public class OutsideLights implements Observer, ObserverDisplayElement{
 	private int hour;
 	@SuppressWarnings("unused")
 	private ObserverSubject observerData;
+	private int testValue;
 	
 	OutsideLightState outsideLightsOn;
 	OutsideLightState outsideLightsOff;
@@ -54,21 +55,33 @@ public class OutsideLights implements Observer, ObserverDisplayElement{
 	
 	public void nighttime() {
 		state.nighttime();
+		testValue = 1;
 	}
 	
 	public void daytime() {
 		state.daytime();
+		testValue = 2;
 	}
 	
 	public void switchOn() {
 		state.switchOn();
+		testValue = 1;
 	}
 	
 	public void switchOff() {
 		state.switchOff();
+		testValue = 2;
 	}
 
 	public OutsideLightState getOutsideLightsOnState() {return outsideLightsOn;}
 	public OutsideLightState getOutsideLightsOffState() {return outsideLightsOff;}
+	
+	public int testValue() {
+		return testValue;
+	}
+	
+	public void setTestValue(int testValue) {
+		this.testValue = testValue;
+	}
 	
 }

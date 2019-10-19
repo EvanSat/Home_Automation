@@ -10,6 +10,7 @@ public class InsideLights implements Observer, ObserverDisplayElement{
 	private int hour;
 	@SuppressWarnings("unused")
 	private ObserverSubject observerData;
+	private int testValue;
 	
 	InsideLightState insideLightsOn;
 	InsideLightState insideLightsOff;
@@ -60,22 +61,33 @@ public class InsideLights implements Observer, ObserverDisplayElement{
 	
 	public void nightLight() {
 		state.nightLight();
+		testValue = 1;
 	}
 	
 	public void morningLight() {
 		state.morningLight();
+		testValue = 1;
 	}
 	
 	public void switchOn() {
 		state.switchOn();
+		testValue = 1;
 	}
 	
 	public void switchOff() {
 		state.switchOff();
+		testValue = 2;
 	}
 
 	public InsideLightState getInsideLightsOnState() {return insideLightsOn;}
 	public InsideLightState getInsideLightsOffState() {return insideLightsOff;}
 
+	public int testValue() {
+		return testValue;
+	}
+	
+	public void setTestValue(int testValue) {
+		this.testValue = testValue;
+	}
 
 }
