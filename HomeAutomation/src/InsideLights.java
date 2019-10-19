@@ -81,7 +81,15 @@ public class InsideLights implements Observer, ObserverDisplayElement{
 
 	public InsideLightState getInsideLightsOnState() {return insideLightsOn;}
 	public InsideLightState getInsideLightsOffState() {return insideLightsOff;}
+	
+	public static void staticSwitchOn(InsideLights object) {
+		object.switchOn();
+	}
 
+	public static void staticSwitchOff(InsideLights object) {
+		object.switchOff();
+	}
+	
 	public int testValue() {
 		return testValue;
 	}

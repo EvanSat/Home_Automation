@@ -76,6 +76,14 @@ public class OutsideLights implements Observer, ObserverDisplayElement{
 	public OutsideLightState getOutsideLightsOnState() {return outsideLightsOn;}
 	public OutsideLightState getOutsideLightsOffState() {return outsideLightsOff;}
 	
+	public static void staticSwitchOn(OutsideLights object) {
+		object.switchOn();
+	}
+
+	public static void staticSwitchOff(OutsideLights object) {
+		object.switchOff();
+	}
+	
 	public int testValue() {
 		return testValue;
 	}

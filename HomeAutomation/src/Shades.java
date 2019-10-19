@@ -90,6 +90,14 @@ public class Shades implements Observer, ObserverDisplayElement{
 		object.shadesUp();
 	}
 	
+	public static void staticShadesDown(Shades object) {
+		object.shadesDown();
+	}
+	
+	public static void staticHalfway(Shades object) {
+		object.shadesHalfway();
+	}
+	
 	public int testValue() {
 		return testValue;
 	}

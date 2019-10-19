@@ -81,6 +81,18 @@ public class Windows implements Observer, ObserverDisplayElement {
 	public WindowState getWindowsHalfwayState() {return windowsHalfwayOpen;}
 	public WindowState getWindowCloseState() {return windowsClose;}
 	
+	public static void staticWindowsFullOpen(Windows object) {
+		object.windowsFullOpen();
+	}
+	
+	public static void staticWindowsHalfwayOpen(Windows object) {
+		object.windowsHalfwayOpen();
+	}
+	
+	public static void staticWindowsClose(Windows object) {
+		object.windowsClose();
+	}
+	
 	public int testValue() {
 		return testValue;
 	}

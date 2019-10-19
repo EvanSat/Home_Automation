@@ -1,3 +1,10 @@
+/***
+ * 
+ * CPSC 60000
+ * Programming Final AssignmentFactory 
+ * @author Evan Sabado
+ *
+ */
 
 public class Main {
 
