@@ -3,7 +3,8 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({})
+@SuiteClasses({ JUnitInsideLights.class, JUnitOutsideLights.class,
+			   JUnitShades.class, JUnitWindows.class })
 public class AllTests {
-
+	
 }
