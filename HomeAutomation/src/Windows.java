@@ -100,4 +100,10 @@ public class Windows implements Observer, ObserverDisplayElement {
 	public void setTestValue(int testValue) {
 		this.testValue = testValue;
 	}
+	
+	//
+	public WindowState getWindowState() {
+		
+		return state;
+	}
 }

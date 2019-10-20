@@ -15,7 +15,6 @@ public class Main {
 		OutsideLights outsideLights = new OutsideLights(observerData);
 		@SuppressWarnings("unused")
 		InsideLights insideLights = new InsideLights(observerData);
-		@SuppressWarnings("unused")
 		Shades shades = new Shades(observerData);
 		@SuppressWarnings("unused")
 		Windows windows = new Windows(observerData);
@@ -33,5 +32,15 @@ public class Main {
 		System.out.println();
 		observerData.setMeasurements(54, 75, 70, 12);
 		System.out.println();
+			
+		CmdButton remote = new CmdButton();
+		CmdShutDown cmdWindow = new CmdShutDown(windows, shades, outsideLights, insideLights);
+		remote.setCmdButton(cmdWindow);
+		remote.press();
+		
+		ProxyGetWindowState proxyWindowState2 = new ProxyWindows(observerData);
+		System.out.println("\nWindow state via proxy = " + proxyWindowState2.getWindowState());
+		
+	
 	}
 }

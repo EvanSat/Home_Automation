@@ -12,7 +12,7 @@ class JUnitShades {
 		observerData.setMeasurements(71, 60, 70, 10);
 		assert(shades.testValue()==1);
 		observerData.setMeasurements(71, 60, 70, 18);
-		assert(shades.testValue()==1);
+		assert(shades.testValue()==2);
 		
 	
 	}
